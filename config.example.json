@@ -1,0 +1,79 @@
+{
+  "openRouteServiceApiKey": "PASTE_YOUR_HEIGIT_API_KEY_HERE",
+  "defaultLatitude": 39.1638,
+  "defaultLongitude": -119.7674,
+  "defaultZoom": 10,
+  "smartRouting": {
+    "maximumEndpointSnapMeters": 35
+  },
+  "elevation": {
+    "sampleSpacingMeters": 75,
+    "maximumSamples": 95
+  },
+  "automaticPoi": {
+    "enabled": true,
+    "timeoutMs": 5000,
+    "searchTerms": [
+      "pass",
+      "saddle",
+      "gap",
+      "col",
+      "lake",
+      "pond",
+      "reservoir",
+      "peak",
+      "summit",
+      "mountain",
+      "campground"
+    ],
+    "acceptanceYards": {
+      "Pass": 350,
+      "Lake": 1000,
+      "Summit": 350,
+      "Camp": 250,
+      "Custom": 150
+    },
+    "provider": "hybrid",
+    "overpassTimeoutMs": 8500,
+    "nominatimTimeoutMs": 3500,
+    "searchPaddingDegrees": 0.05,
+    "maximumRawResults": 500,
+    "keywordGroups": {
+      "Pass": [
+        "pass",
+        "saddle",
+        "gap",
+        "col"
+      ],
+      "Lake": [
+        "lake",
+        "pond",
+        "reservoir",
+        "lagoon"
+      ],
+      "Summit": [
+        "peak",
+        "summit",
+        "mountain",
+        "mount"
+      ],
+      "Camp": [
+        "camp",
+        "campground",
+        "shelter"
+      ],
+      "Water": [
+        "spring",
+        "drinking water"
+      ]
+    },
+    "overpassMirrors": [
+      "https://overpass.kumi.systems/api/interpreter",
+      "https://overpass-api.de/api/interpreter",
+      "https://lz4.overpass-api.de/api/interpreter",
+      "https://z.overpass-api.de/api/interpreter"
+    ],
+    "corridorRadiusMeters": 1500,
+    "corridorSampleMeters": 1200
+  }
+}
