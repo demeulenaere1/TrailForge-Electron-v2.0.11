@@ -1,26 +1,14 @@
-# TrailForge 2.0.11
+# TrailForge 2.0.12
 
-Built directly from the supplied TrailForge 2.0.10 source.
+Built from the TrailForge 2.0.11 source with a focused update to automatic POI discovery.
 
-## Overpass-first POI discovery
-TrailForge now tries four Overpass mirrors in order:
-- overpass.kumi.systems
-- overpass-api.de
-- lz4.overpass-api.de
-- z.overpass-api.de
+## POI discovery updates
+- Keeps `lake` and `pond` searches enabled; lake remains a supported automatic POI category.
+- Replaces the previous Overpass mirror list with distinct public alternatives, including a North America endpoint.
+- Uses a 15-second per-request Overpass timeout and smaller route corridor and bounding-box padding to reduce query load.
+- Keeps Nominatim as fallback and preserves existing POI acceptance distances.
 
-The Overpass query explicitly requests named natural water, any named water type, natural lake, mountain passes, peaks, campsites, and names containing Pass, Saddle, Gap, Col, Lake, Pond, Reservoir, Peak, Summit, or Mountain. It searches both a widened route-area box and route-sample circles.
+Public Overpass and Nominatim services are community services and can still be temporarily unavailable or impose usage limits. The diagnostic popup remains the best way to identify provider failures for a particular route.
 
-## Nominatim fallback
-Nominatim is used only when every Overpass mirror fails or Overpass returns no named features. Fallback terms remain Pass, Saddle, Gap, Col, Lake, Pond, Reservoir, Peak, Summit, Mountain, and Campground.
-
-## Configurable thresholds
-Existing acceptance distances remain unchanged and configurable. Overpass corridor radius, sample spacing, timeout, mirrors, and search padding are also configurable.
-
-## Retained from 2.0.10
-- POI diagnostics popup
-- Raw names and rejected distances
-- POI elevation labels and click-to-map
-- Right-click POI edit, convert to manual, and delete
-- Manual POIs
-- Print report, GPX, KML, Google Earth, and route library
+## API key safety
+`config.json` is a local runtime configuration file. Replace the OpenRouteService placeholder with a newly issued API key before using routing. Do not commit API keys to a public repository.

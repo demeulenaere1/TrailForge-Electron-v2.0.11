@@ -1,5 +1,5 @@
 {
-  "openRouteServiceApiKey": "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6ImIzZmQ3Mzc5MzljNTRhMzE4YmIxMTgwMWM1ZjI2NWJkIiwiaCI6Im11cm11cjY0In0=",
+  "openRouteServiceApiKey": "REPLACE_WITH_A_NEW_OPENROUTESERVICE_API_KEY",
   "defaultLatitude": 39.1638,
   "defaultLongitude": -119.7674,
   "defaultZoom": 10,
@@ -34,46 +34,24 @@
       "Custom": 150
     },
     "provider": "hybrid",
-    "overpassTimeoutMs": 8500,
-    "nominatimTimeoutMs": 3500,
-    "searchPaddingDegrees": 0.05,
-    "maximumRawResults": 500,
+    "overpassTimeoutMs": 15000,
+    "nominatimTimeoutMs": 5000,
+    "searchPaddingDegrees": 0.015,
+    "maximumRawResults": 250,
     "keywordGroups": {
-      "Pass": [
-        "pass",
-        "saddle",
-        "gap",
-        "col"
-      ],
-      "Lake": [
-        "lake",
-        "pond",
-        "reservoir",
-        "lagoon"
-      ],
-      "Summit": [
-        "peak",
-        "summit",
-        "mountain",
-        "mount"
-      ],
-      "Camp": [
-        "camp",
-        "campground",
-        "shelter"
-      ],
-      "Water": [
-        "spring",
-        "drinking water"
-      ]
+      "Pass": ["pass", "saddle", "gap", "col"],
+      "Lake": ["lake", "pond", "reservoir", "lagoon"],
+      "Summit": ["peak", "summit", "mountain", "mount"],
+      "Camp": ["camp", "campground", "shelter"],
+      "Water": ["spring", "drinking water"]
     },
     "overpassMirrors": [
-      "https://overpass.kumi.systems/api/interpreter",
+      "https://overpass.private.coffee/api/interpreter",
+      "https://ovp.dresel.systems/api-na/interpreter",
       "https://overpass-api.de/api/interpreter",
-      "https://lz4.overpass-api.de/api/interpreter",
-      "https://z.overpass-api.de/api/interpreter"
+      "https://maps.mail.ru/osm/tools/overpass/api/interpreter"
     ],
-    "corridorRadiusMeters": 1500,
-    "corridorSampleMeters": 1200
+    "corridorRadiusMeters": 800,
+    "corridorSampleMeters": 800
   }
 }

@@ -1,1 +1,62 @@
-{"name":"trailforge-desktop","version":"2.0.11","main":"main.js","private":true,"scripts":{"start":"electron .","build":"electron-builder --win nsis","build:portable":"electron-builder --win portable"},"dependencies":{"sql.js":"^1.12.0"},"devDependencies":{"electron":"^45.3.2","electron-builder":"^25.1.0"},"build":{"appId":"com.trailforge.desktop","productName":"TrailForge","asar":true,"directories":{"output":"dist"},"files":["main.js","preload.js","src/**/*","package.json","node_modules/sql.js/dist/sql-wasm.wasm"],"extraResources":[{"from":"config.json","to":"config.json"}],"win":{"target":[{"target":"nsis","arch":["x64"]}],"icon":"assets/icon.ico","artifactName":"TrailForge-Setup-${version}.${ext}"},"nsis":{"oneClick":false,"allowToChangeInstallationDirectory":true,"createDesktopShortcut":true,"createStartMenuShortcut":true},"portable":{"artifactName":"TrailForge-Portable-${version}.${ext}"}},"allowScripts":{"electron@33.4.11":true,"electron-winstaller@5.4.0":true}}
+{
+  "name": "trailforge-desktop",
+  "version": "2.0.12",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win nsis",
+    "build:portable": "electron-builder --win portable"
+  },
+  "dependencies": {
+    "sql.js": "^1.12.0"
+  },
+  "devDependencies": {
+    "electron": "^45.3.2",
+    "electron-builder": "^25.1.0"
+  },
+  "build": {
+    "appId": "com.trailforge.desktop",
+    "productName": "TrailForge",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "package.json",
+      "node_modules/sql.js/dist/sql-wasm.wasm"
+    ],
+    "extraResources": [
+      {
+        "from": "config.json",
+        "to": "config.json"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "artifactName": "TrailForge-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "portable": {
+      "artifactName": "TrailForge-Portable-${version}.${ext}"
+    }
+  },
+  "allowScripts": {
+    "electron@33.4.11": true,
+    "electron-winstaller@5.4.0": true
+  }
+}
